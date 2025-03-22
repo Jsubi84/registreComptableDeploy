@@ -1,0 +1,33 @@
+Manifest-Version: 1.0
+Main-Class: com.app.SpringSecurityAppApplication
+Class-Path: spring-aspects-6.1.4.jar spring-boot-starter-aop-3.2.3.jar s
+ lf4j-api-2.0.12.jar jboss-logging-3.5.3.Final.jar spring-tx-6.1.4.jar H
+ ikariCP-5.0.1.jar hibernate-core-6.4.4.Final.jar jaxb-runtime-4.0.4.jar
+  spring-data-commons-3.2.3.jar spring-web-6.1.4.jar jakarta.inject-api-
+ 2.0.1.jar spring-beans-6.1.4.jar classmate-1.6.0.jar hibernate-validato
+ r-8.0.1.Final.jar spring-jcl-6.1.4.jar spring-boot-starter-json-3.2.3.j
+ ar spring-boot-starter-tomcat-3.2.3.jar tomcat-embed-core-10.1.19.jar s
+ pring-expression-6.1.4.jar jackson-core-2.15.4.jar spring-boot-autoconf
+ igure-3.2.3.jar logback-core-1.4.14.jar jakarta.xml.bind-api-4.0.1.jar 
+ tomcat-embed-el-10.1.19.jar lombok-1.18.30.jar spring-boot-starter-data
+ -jpa-3.2.3.jar spring-core-6.1.4.jar jakarta.transaction-api-2.0.1.jar 
+ aspectjweaver-1.9.21.jar spring-data-jpa-3.2.3.jar java-jwt-4.4.0.jar t
+ omcat-embed-websocket-10.1.19.jar spring-boot-devtools-3.2.3.jar spring
+ -orm-6.1.4.jar jakarta.validation-api-3.0.2.jar micrometer-commons-1.12
+ .3.jar spring-boot-starter-web-3.2.3.jar spring-boot-starter-3.2.3.jar 
+ logback-classic-1.4.14.jar spring-boot-starter-security-3.2.3.jar sprin
+ g-boot-starter-logging-3.2.3.jar jul-to-slf4j-2.0.12.jar jackson-databi
+ nd-2.15.4.jar spring-jdbc-6.1.4.jar spring-aop-6.1.4.jar jackson-annota
+ tions-2.15.4.jar jackson-datatype-jdk8-2.15.4.jar jandex-3.1.2.jar spri
+ ng-boot-starter-jdbc-3.2.3.jar jakarta.persistence-api-3.1.0.jar jackso
+ n-module-parameter-names-2.15.4.jar spring-context-6.1.4.jar spring-sec
+ urity-web-6.2.2.jar micrometer-observation-1.12.3.jar log4j-api-2.21.1.
+ jar hibernate-commons-annotations-6.0.6.Final.jar spring-security-crypt
+ o-6.2.2.jar spring-webmvc-6.1.4.jar jakarta.activation-api-2.1.2.jar tx
+ w2-4.0.4.jar spring-boot-starter-validation-3.2.3.jar jaxb-core-4.0.4.j
+ ar antlr4-runtime-4.13.0.jar mysql-connector-j-8.3.0.jar spring-boot-3.
+ 2.3.jar spring-security-core-6.2.2.jar angus-activation-2.0.1.jar log4j
+ -to-slf4j-2.21.1.jar jackson-datatype-jsr310-2.15.4.jar snakeyaml-2.2.j
+ ar istack-commons-runtime-4.1.2.jar byte-buddy-1.14.12.jar jakarta.anno
+ tation-api-2.1.1.jar spring-security-config-6.2.2.jar
+
