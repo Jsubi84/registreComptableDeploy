@@ -13,7 +13,7 @@ COPY ./.mvn /root/.mvn
 COPY ./mvnw /root
 
 #DOWNLOAD DEPENDENCIES
-RUN chmod + mvnw
+RUN chmod +x /root/mvnw
 RUN ./mvnw dependency:go-offline
 
 #COPY CODE PROJECTE
