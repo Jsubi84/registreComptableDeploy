@@ -22,7 +22,7 @@ public interface RegistreRepository extends BaseRepository<Registre, Long>, Regi
     //@Query(value="select SUM(importreg) AS total from Registre WHERE tipus= :tipus AND YEAR(data)= :year")
     //Double getSumaByTipus(@Param("tipus")Boolean sumaImport, @Param("year")int year);
     
-    @Query(value="SELECT r.id FROM Registre r WHERE r.importreg= :importReg AND r.data= :dataRegistre AND r.subcategoria_id= :subcatId", nativeQuery=true)
+    @Query(value="SELECT r.id FROM registre r WHERE r.importreg= :importReg AND r.data= :dataRegistre AND r.subcategoria_id= :subcatId", nativeQuery=true)
     List<Long> getRegistreRepeate(@Param("importReg")Double importReg, @Param("dataRegistre")Date data, @Param("subcatId")Long subcatId);  
     
     @Query(value="SELECT r FROM Registre r JOIN r.subcategoria s JOIN s.categoria c WHERE c.id= :cat")
@@ -37,7 +37,7 @@ public interface RegistreRepository extends BaseRepository<Registre, Long>, Regi
     @Query(value="SELECT SUM(importreg) AS Result FROM registre WHERE subcategoria_id= :id AND YEAR(data)= :year", nativeQuery=true)
     Double getTotalSubcatByYear(@Param("id")Long id, @Param("year")int year);
     
-    @Query(value="SELECT SUM(r.importreg) FROM Registre r JOIN subcategoria s ON r.subcategoria_id = s.id JOIN categoria c ON s.categoria_id = c.id WHERE c.id= :id AND YEAR(r.data)= :year", nativeQuery=true)
+    @Query(value="SELECT SUM(r.importreg) FROM registre r JOIN subcategoria s ON r.subcategoria_id = s.id JOIN categoria c ON s.categoria_id = c.id WHERE c.id= :id AND YEAR(r.data)= :year", nativeQuery=true)
     Double getTotalCatByYear(@Param("id")Long id, @Param("year")int year);
     
     @Query(value="SELECT r FROM Registre r JOIN r.subcategoria s WHERE s.id= :id AND YEAR(r.data)= :year AND MONTH(r.data)= :month")
