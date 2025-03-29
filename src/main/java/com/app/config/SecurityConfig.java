@@ -34,6 +34,7 @@ public class SecurityConfig {
     @Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity httpSecurity) throws Exception {
         return httpSecurity
+                .cors(cors -> cors.configurationSource(corsConfigurationSource()))
                 .csrf(AbstractHttpConfigurer::disable)
                 .httpBasic(Customizer.withDefaults())
                 .sessionManagement(session -> session.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
@@ -46,19 +47,8 @@ public class SecurityConfig {
                     http.requestMatchers(HttpMethod.GET, "/api/**").permitAll();
                     http.requestMatchers(HttpMethod.PUT, "/api/**").permitAll();
                     http.requestMatchers(HttpMethod.DELETE, "/api/**").permitAll();
-//                    http.requestMatchers(HttpMethod.GET, "/api/**").hasRole("ADMIN");
-//                    http.requestMatchers(HttpMethod.POST, "/api/**").hasRole("ADMIN");
-//                    http.requestMatchers(HttpMethod.PUT, "/api/**").hasRole("ADMIN");
-//                    http.requestMatchers(HttpMethod.DELETE, "/api/**").hasRole("ADMIN");
-//                    http.requestMatchers(HttpMethod.GET, "/api/**").hasRole("STD");
-//                    http.requestMatchers(HttpMethod.POST, "/api/**").hasRole("STD");
-//                    http.requestMatchers(HttpMethod.PUT, "/api/**").hasRole("STD");
-//                    http.requestMatchers(HttpMethod.DELETE, "/api/**").hasRole("STD");
-//                    http.requestMatchers(HttpMethod.GET, "/method/get").hasAuthority("READ");
-//                    http.requestMatchers(HttpMethod.POST, "/method/post").hasAuthority("CREATE");
-//                    http.requestMatchers(HttpMethod.DELETE, "/method/delete").hasAuthority("DELETE");
-//                    http.requestMatchers(HttpMethod.PUT, "/method/put").hasAuthority("UPDATE");
 
+                    http.requestMatchers(HttpMethod.OPTIONS, "/**").permitAll();
                     // Configurar el resto de endpoint - NO ESPECIFICADOS
                     http.anyRequest().denyAll();
                 })
