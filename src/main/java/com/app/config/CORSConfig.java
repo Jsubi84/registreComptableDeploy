@@ -15,7 +15,7 @@ public class CORSConfig {
             public void addCorsMappings(CorsRegistry registry){
                 registry.addMapping("/**")
                         //.allowedOrigins("http://localhost:4200")
-                        .allowedOrigins("https://registrecomptableangular.onrender.com")
+                        .allowedOrigins("*")
                         .allowedMethods("GET", "POST", "PUT","DELETE", "OPTIONS")
                 		.allowedHeaders("*");
             }
